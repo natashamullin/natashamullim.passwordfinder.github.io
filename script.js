@@ -1,4 +1,60 @@
-// Assignment code here
+var uppercase = "ABCDEFGHIJKLMONPQRSTUVWXYZ";
+var lowercase = "abcdefghijklmnopqrstuvwxyz";
+var numbers = "1234567890";
+var specials = "! /@/ # % ^ & * ( ) _ + = - : ; { [ } ] ' ? / > . < , ~ ";
+var results = ""
+var passwordlength = ""
+
+function generatePassword(passwordLength) {
+  window.confirm("Please follow the prompts, I will generate a password for you.");
+  if (confirm);
+  else (window.alert("ok, thank you! please return when you're ready to generate your password."));
+
+
+  var passwordLength =
+    window.prompt("Please type a number between 8 and 126! this will set how long you want the password to be at the least ")
+
+  if (8 > passwordLength || passwordLength > 126 || passwordLength === "" || passwordLength === null) {
+    window.alert("hey!! a number between 8-126! stop playing!!")
+    return generatePassword();
+  };
+  console.log(passwordLength);
+  //choose lowercase case letters
+
+  var lowercase = window.confirm("would you like to have lowercase letters in your password");
+  if (window.confirm === false) { results = results + lowercase };
+  console.log(lowercase);
+
+  // choose uppercase
+  var uppercase = window.confirm("would you like to have uppercase letters in your password");
+  if (window.confirm === false) { results = results + upperase };
+  console.log(uppercase);
+
+  //choose specials
+  var specials = window.confirm("would you like to have special characters in your password");
+  if (window.confirm === false) { results = results + specials };
+  console.log(specials);
+  //choose numbers
+
+
+  var numbers = window.confirm("would you like to have numbers in your password");
+  if (window.confirm === false) { results = results + numbers };
+  console.log(numbers);
+
+  //password  is made fingers crossed!
+
+  var password = ""
+  for (var i = 0; i < passwordLength; i++) {
+    var passwordLength = results[Math.floor(Math.random() * passwordLength)];
+    password = password + results[randomPassword]
+  }
+
+
+  return results;
+};
+
+
+
 
 
 // Get references to the #generate element
@@ -11,7 +67,7 @@ function writePassword() {
 
   passwordText.value = password;
 
-}
+};
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword)
