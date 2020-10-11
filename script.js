@@ -21,36 +21,36 @@ function generatePassword(passwordLength) {
   console.log(passwordLength);
   //choose lowercase case letters
 
-  var lowercase = window.confirm("would you like to have lowercase letters in your password");
-  if (window.confirm === false) { results = results + lowercase };
+  var lowercaseConfirm = window.confirm("would you like to have lowercase letters in your password");
+  if (lowercaseConfirm) { results = results + lowercase };
   console.log(lowercase);
 
   // choose uppercase
-  var uppercase = window.confirm("would you like to have uppercase letters in your password");
-  if (window.confirm === false) { results = results + upperase };
+  var uppercaseConfirm = window.confirm("would you like to have uppercase letters in your password");
+  if (uppercaseConfirm) { results = results + uppercase };
   console.log(uppercase);
 
   //choose specials
-  var specials = window.confirm("would you like to have special characters in your password");
-  if (window.confirm === false) { results = results + specials };
+  var specialsConfirm = window.confirm("would you like to have special characters in your password");
+  if (specialsConfirm) { results = results + specials };
   console.log(specials);
   //choose numbers
 
 
-  var numbers = window.confirm("would you like to have numbers in your password");
-  if (window.confirm === false) { results = results + numbers };
+  var numbersConfirm = window.confirm("would you like to have numbers in your password");
+  if (numbersConfirm ) { results = results + numbers };
   console.log(numbers);
 
   //password  is made fingers crossed!
 
   var password = ""
-  for (var i = 0; i < passwordLength; i++) {
-    var passwordLength = results[Math.floor(Math.random() * passwordLength)];
-    password = password + results[randomPassword]
+  for (var i = 0; i < parseInt(passwordLength); i++) {
+    var randomPassword = results[Math.floor(Math.random() * results.length)];
+    password = password + randomPassword;
   }
 
 
-  return results;
+  return password;
 };
 
 
